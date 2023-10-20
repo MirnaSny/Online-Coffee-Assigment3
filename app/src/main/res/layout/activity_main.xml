@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/brown_light">
+
+    <ImageView
+        android:id="@+id/coffee_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/coffee_shop_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cup_a_coffee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cup_a_coffee"
+        android:textSize="50sp"
+        android:textColor="@color/brown_medium"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffee_img" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/about_us"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cup_a_coffee"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/description_txt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_marginTop="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_txt"
+        app:layout_constraintBottom_toTopOf="@id/start_btn"/>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:text="@string/start_ordering"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:background="@drawable/custom_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_txt"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
