@@ -94,8 +94,6 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <!--//back here in margin -->
-
                     <RadioButton
                         android:id="@+id/macchiato"
                         android:layout_width="wrap_content"

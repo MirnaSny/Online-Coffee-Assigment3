@@ -13,8 +13,6 @@ import com.exercise1.onlinecoffeeassigment3.databinding.FragmentOrderBinding
 class OrderFragment : Fragment() {
 
     private lateinit var binding: FragmentOrderBinding
-    private lateinit var coffeeType:String
-    private lateinit var coffeeSize:String
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,6 +20,13 @@ class OrderFragment : Fragment() {
     ): View? {
         binding = FragmentOrderBinding.inflate(layoutInflater)
         return binding.root
+    }
+    private val coffeeTypeList by lazy {
+        listOf(binding.americano,binding.macchiato,binding.latte,binding.cappuccino)
+    }
+
+    private val coffeeSizeList by lazy {
+        listOf(binding.small,binding.medium,binding.large)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,9 +40,7 @@ class OrderFragment : Fragment() {
             findNavController().navigate(R.id.paymentFragment)
         }
     }
-    private fun order(){
 
-    }
     private fun showCoffeeSize(){
         val list = listOf(binding.americano,binding.cappuccino,binding.latte ,binding.macchiato)
         list.forEach{
@@ -58,15 +61,4 @@ class OrderFragment : Fragment() {
             }
         }
     }
-//    private fun coffeeType(){
-//        coffeeType = selectCoffee
-//    }
-//
-//    private fun coffeeSize(){
-//        coffeeSize = selectCoffee
-//    }
-//
-//    private fun selectCoffee(list:List<RadioButton>):List<String>{
-//        return list.filter{it.isChecked}
-//    }
 }
