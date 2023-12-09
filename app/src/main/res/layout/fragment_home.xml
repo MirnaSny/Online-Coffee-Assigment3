@@ -5,6 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/brown_light">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/welcome"
+        app:titleTextColor="@color/white" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/coffee_img"
         android:layout_width="match_parent"

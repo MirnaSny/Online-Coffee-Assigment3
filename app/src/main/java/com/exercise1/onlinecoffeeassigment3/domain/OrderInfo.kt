@@ -1,0 +1,4 @@
+package com.exercise1.onlinecoffeeassigment3.domain
+data class OrderInfo(
+    var orderList:MutableList<String>
+)

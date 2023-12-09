@@ -1,4 +1,4 @@
-package com.exercise1.onlinecoffeeassigment3.fragments
+package com.exercise1.onlinecoffeeassigment3.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

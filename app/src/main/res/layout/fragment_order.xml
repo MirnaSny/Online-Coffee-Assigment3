@@ -3,14 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brown_light"
-    android:orientation="vertical">
+    android:background="@color/brown_light">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/order"
+        app:titleTextColor="@color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="731dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_payment"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,12 +40,13 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginBottom="15dp"
-                    android:text="Select a Coffee"
+                    android:text="@string/select_a_coffee"
                     android:textColor="@color/brown_dark"
                     android:textSize="35sp"
                     android:textStyle="bold|italic"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <RadioGroup
                     android:id="@+id/radio1"
@@ -50,14 +62,15 @@
                         android:id="@+id/americano"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Americano"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/custom_radio_button"
+                        android:button="@color/brown_dark"
                         android:paddingStart="40dp"
                         android:paddingTop="10dp"
                         android:paddingEnd="40dp"
                         android:paddingBottom="10dp"
+                        android:text="@string/americano"
                         android:textColor="@drawable/text_color"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -66,14 +79,15 @@
                         android:id="@+id/cappuccino"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cappuccino"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/custom_radio_button"
+                        android:button="@color/brown_dark"
                         android:paddingStart="40dp"
                         android:paddingTop="10dp"
                         android:paddingEnd="40dp"
                         android:paddingBottom="10dp"
+                        android:text="@string/cappuccino"
                         android:textColor="@drawable/text_color"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -82,14 +96,15 @@
                         android:id="@+id/latte"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Latte"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/custom_radio_button"
+                        android:button="@color/brown_dark"
                         android:paddingStart="40dp"
                         android:paddingTop="10dp"
                         android:paddingEnd="40dp"
                         android:paddingBottom="10dp"
+                        android:text="@string/latte"
                         android:textColor="@drawable/text_color"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -98,14 +113,15 @@
                         android:id="@+id/macchiato"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Macchiato"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/custom_radio_button"
+                        android:button="@color/brown_dark"
                         android:paddingStart="40dp"
                         android:paddingTop="10dp"
                         android:paddingEnd="40dp"
                         android:paddingBottom="10dp"
+                        android:text="@string/macchiato"
                         android:textColor="@drawable/text_color"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -117,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@drawable/custom_button"
-                    android:text="Continue"
+                    android:text="@string/continue1"
                     android:textColor="@color/white"
                     android:textSize="25dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -141,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginBottom="15dp"
-                    android:text="Select a size"
+                    android:text="@string/select_a_size"
                     android:textColor="@color/brown_dark"
                     android:textSize="35sp"
                     android:textStyle="bold|italic"
@@ -163,7 +179,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Small"
+                        android:text="@string/small"
                         android:textColor="@color/brown_dark"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -183,7 +199,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Large"
+                        android:text="@string/large"
                         android:textColor="@color/brown_dark"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -210,7 +226,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_option"
@@ -218,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginBottom="15dp"
-                    android:text="Options"
+                    android:text="@string/options"
                     android:textColor="@color/brown_dark"
                     android:textSize="35sp"
                     android:textStyle="bold|italic"
@@ -238,7 +254,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 Shots"
+                        android:text="@string/_2_shots"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -247,7 +263,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="Sugar"
+                        android:text="@string/sugar"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -256,7 +272,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="Cream"
+                        android:text="@string/cream"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -265,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="Whole Milk"
+                        android:text="@string/whole_milk"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -274,7 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="2% Milk"
+                        android:text="@string/_2_milk"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -283,7 +299,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="Not Fat Milk"
+                        android:text="@string/not_fat_milk"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -292,7 +308,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="Almond Milk"
+                        android:text="@string/almond_milk"
                         android:textColor="@color/brown_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -305,7 +321,7 @@
                 android:layout_height="55dp"
                 android:layout_margin="15dp"
                 android:background="@drawable/custom_button"
-                android:text="Continue"
+                android:text="@string/continue1"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 android:visibility="gone"

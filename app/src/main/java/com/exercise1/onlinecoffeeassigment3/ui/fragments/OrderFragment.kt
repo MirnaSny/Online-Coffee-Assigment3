@@ -1,4 +1,4 @@
-package com.exercise1.onlinecoffeeassigment3.fragments
+package com.exercise1.onlinecoffeeassigment3.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,12 +13,17 @@ import com.exercise1.onlinecoffeeassigment3.databinding.FragmentOrderBinding
 class OrderFragment : Fragment() {
 
     private lateinit var binding: FragmentOrderBinding
+    private lateinit var coffeeType: String
+    private lateinit var coffeeSize: String
+//    private var orderList:MutableList<String>=mutableListOf()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOrderBinding.inflate(layoutInflater)
+
         return binding.root
     }
     private val coffeeTypeList by lazy {
