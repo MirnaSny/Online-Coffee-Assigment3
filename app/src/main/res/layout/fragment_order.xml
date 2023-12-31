@@ -45,8 +45,7 @@
                     android:textSize="35sp"
                     android:textStyle="bold|italic"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <RadioGroup
                     android:id="@+id/radio1"
@@ -252,6 +251,7 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_option">
 
                     <CheckBox
+                        android:id="@+id/first_option"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_2_shots"
@@ -260,6 +260,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/sugar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -269,6 +270,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/cream"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -278,6 +280,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/whole_milk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -287,6 +290,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/half_milk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -296,6 +300,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/not_fat_milk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -305,6 +310,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
+                        android:id="@+id/almond_milk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"

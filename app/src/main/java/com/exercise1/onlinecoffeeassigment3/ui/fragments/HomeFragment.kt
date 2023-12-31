@@ -29,4 +29,5 @@ class HomeFragment : Fragment(){
         binding.startBtn.setOnClickListener{
             findNavController().navigate(R.id.orderFragment)
         }
-    } }
+    }
+}

@@ -33,8 +33,10 @@
             android:id="@+id/cl_name_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
+
+
             <TextView
-                android:id="@+id/txt_pickup"
+                android:id="@+id/enter_pickup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -43,9 +45,9 @@
                 android:textColor="@color/brown_dark"
                 android:textSize="25sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/txt_full_name"
                 android:layout_width="match_parent"
@@ -55,7 +57,7 @@
                 android:textColor="@color/brown_dark"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_pickup"/>
+                app:layout_constraintTop_toBottomOf="@id/enter_pickup" />
 
             <EditText
                 android:id="@+id/edit_full_name"
@@ -92,17 +94,185 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_phone_number"/>
 
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/picker_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/pickup_time"
+                android:textColor="@color/brown_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/picker_time">
+
+                <NumberPicker
+                    android:id="@+id/hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"/>
+
+                <NumberPicker
+                    android:id="@+id/minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"/>
+
+                <NumberPicker
+                    android:id="@+id/am_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_place_order_one"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
+                android:background="@drawable/coffee_types_background"
                 android:text="@string/place_order"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_phone_number"/>
-
+                app:layout_constraintBottom_toBottomOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/enter_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/enter_payment_info"
+                android:textColor="@color/brown_dark"
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/card_type"
+                android:textColor="@color/brown_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/enter_payment"/>
+
+
+            <Spinner
+                android:id="@+id/spinner_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_type"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/card_number"
+                android:textColor="@color/brown_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/_1234123412341234"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_number"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/card_expiry"
+                android:textColor="@color/brown_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_card_number"/>
+
+
+            <EditText
+                android:id="@+id/et_card_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/mm_yyyy"
+                android:inputType="date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_expiry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/card_cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/stars"
+                android:layout_margin="20dp"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_card_expiry"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/coffee_types_background"
+                android:text="@string/place_order"
+                android:textColor="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
     </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

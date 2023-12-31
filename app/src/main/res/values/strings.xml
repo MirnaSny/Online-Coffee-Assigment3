@@ -31,4 +31,16 @@
     <string name="_444_444_444">_444_444_444</string>
     <string name="place_order">PLACE ORDER</string>
     <string name="welcome">Welcome</string>
+    <string name="a_with">"A %1$s %2$s, with "</string>
+    <string name="comma">,</string>
+    <string name="and">"and "</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="enter_payment_info">Enter Payment Info</string>
+    <string name="card_type">Card Type</string>
+    <string name="card_number">Card Number</string>
+    <string name="_1234123412341234">1234123412341234</string>
+    <string name="card_expiry">Card Expiry</string>
+    <string name="mm_yyyy">MM/YYYY</string>
+    <string name="stars">***</string>
+
 </resources>
