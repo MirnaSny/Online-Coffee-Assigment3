@@ -43,4 +43,9 @@
     <string name="mm_yyyy">MM/YYYY</string>
     <string name="stars">***</string>
 
+    <string-array name="CardType">
+        <item>_</item>
+        <item>Visa</item>
+        <item>MasterCard</item>
+    </string-array>
 </resources>
