@@ -42,6 +42,9 @@
     <string name="card_expiry">Card Expiry</string>
     <string name="mm_yyyy">MM/YYYY</string>
     <string name="stars">***</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+
 
     <string-array name="CardType">
         <item>_</item>

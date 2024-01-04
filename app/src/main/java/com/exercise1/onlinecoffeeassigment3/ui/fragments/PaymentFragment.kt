@@ -13,6 +13,9 @@ import com.exercise1.onlinecoffeeassigment3.databinding.FragmentPaymentBinding
 class PaymentFragment : Fragment() {
 
     private lateinit var binding: FragmentPaymentBinding
+    private var hour = 1
+    private var minutes = 0
+    private var amPm = "AM"
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +25,7 @@ class PaymentFragment : Fragment() {
         binding = FragmentPaymentBinding.inflate(layoutInflater)
         return binding.root
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupUI()
@@ -36,11 +40,48 @@ class PaymentFragment : Fragment() {
 
 
     private fun setupUI() {
+        setPickerTimeValues()
         showSpinner()
         setSpinnerAdapter()
         showCardNumberAndExpiry()
     }
 
+    private fun setPickerTimeValues() {
+        binding.hour.minValue= MIN_HOUR_VALUE
+        binding.hour.maxValue= MAX_HOUR_VALUE
+
+        binding.minutes.minValue= MIN_MIN_VALUE
+        binding.minutes.maxValue= MAX_MIN_VALUE
+
+        binding.amPm.minValue= MIN_AM_PM
+        binding.amPm.maxValue= MAX_AM_PM
+
+        //displayedValues -> put the Values inside number picker AM/PM
+        binding.amPm.displayedValues = AM_PM_ARRAY
+
+        //setOnValueChangedListener ->  if there's not any change on value so it will not change
+        binding.hour.setOnValueChangedListener { numberPicker, _ , _ ->
+            hour = numberPicker.value
+
+        }
+        binding.minutes.setOnValueChangedListener { numberPicker, _ , _ ->
+            minutes = numberPicker.value
+
+        }
+        binding.amPm.setOnValueChangedListener { numberPicker, _ , _ ->
+            amPm = AM_PM_ARRAY [numberPicker.value]
+        }
+    }
+
+    companion object{
+        const val MIN_HOUR_VALUE = 1
+        const val MAX_HOUR_VALUE =12
+        const val MIN_MIN_VALUE = 0
+        const val MAX_MIN_VALUE = 59
+        const val MIN_AM_PM = 0
+        val AM_PM_ARRAY = arrayOf("AM","PM")
+        val MAX_AM_PM = AM_PM_ARRAY.size-1 // AM/PM -> " 2 items " which means  2-1 = 1 -> so the maximum is "1"
+    }
 
     private fun showSpinner() {
         binding.btnPlaceOrderOne.setOnClickListener {
@@ -106,6 +147,7 @@ class PaymentFragment : Fragment() {
         binding.continueBtn3.visibility = if (selectedItem == "_") View.GONE else View.VISIBLE
 
     }
+
 
 
 
