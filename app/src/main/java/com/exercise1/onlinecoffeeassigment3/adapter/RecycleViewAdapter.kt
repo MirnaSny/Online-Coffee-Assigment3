@@ -1,4 +1,3 @@
 package com.exercise1.onlinecoffeeassigment3.adapter
 
-class RecycleViewAdapter {
-}
+data class RecycleViewAdapter()
