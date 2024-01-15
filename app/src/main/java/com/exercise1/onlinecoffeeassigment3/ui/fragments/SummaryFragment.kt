@@ -1,4 +1,6 @@
 package com.exercise1.onlinecoffeeassigment3.ui.fragments
 
-class SummaryFragment {
+import androidx.fragment.app.Fragment
+
+class SummaryFragment: Fragment() {
 }

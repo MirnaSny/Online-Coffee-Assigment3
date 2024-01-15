@@ -20,4 +20,9 @@
         android:name="com.exercise1.onlinecoffeeassigment3.ui.fragments.PaymentFragment"
         android:label="PaymentFragment" />
 
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.exercise1.onlinecoffeeassigment3.ui.fragments.SummaryFragment"
+        android:label="SummaryFragment" />
+
 </navigation>

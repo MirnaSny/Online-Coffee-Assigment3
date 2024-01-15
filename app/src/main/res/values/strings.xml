@@ -44,6 +44,11 @@
     <string name="stars">***</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
+    <string name="orderinfo">orderInfo</string>
+    <string name="paymentinfo">paymentInfo</string>
+    <string name="summary">Summary</string>
+    <string name="cup_a_coffee2">Cup A Coffee</string>
+    <string name="order_summary">Order Summary</string>
 
 
     <string-array name="CardType">
